@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Form, Lab 03</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+
+<body>
+	<form>
+		<div>
+			Customer Name: <input type="text" id="name" required />
+		</div>
+		<div>
+			Beverage:
+			<div>
+				<select>
+					<option value="0">Water</option>
+					<option value="1">Coffee</option>
+					<option value="2">Tea</option>
+					<option value="3">Beer</option>
+					<option value="4">Wine</option>
+					<option value="5">Vodka</option>
+				</select>
+			</div>
+			<div>
+				<input type="radio" value="0" checked /> Small
+			</div>
+			<div>
+				<input type="radio" value="1" /> Medium
+			</div>
+			<div>
+				<input type="radio" value="2" /> Large
+			</div>
+			<div>
+				Quantity: <input type="number" id="quantity" required />
+			</div>
+		</div>
+		<div>
+			<button type="button" id="submit">Submit Order</button>
+		</div>
+	</form>
+</body>
+</html>
