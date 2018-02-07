@@ -5,18 +5,25 @@
     <meta charset="utf-8" />
     <title>Form, Lab 03</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="FormScript.js"></script>
+	<script src="moment.js"></script>
 </head>
 
 <body>
+
+	<h2>Need a Drink?<sup>(not a registered trademark... yet)</sup></h2>
+	<h4>Fill out the form below, and we'll deliver to your room in a jiffy!</h4>
+
 	<form>
-		<div>
-			Customer Name: <input type="text" id="name" required />
+		<div class="form-group">
+			Customer Name: <input class="form-control" type="text" id="name" required />
 		</div>
-		<div>
-			Beverage:
-			<div>
-				<select>
-					<option value="0">Water</option>
+
+		<div class="form-group form-inline">
+			<label class="pr-2">Beverage:</label>
+			<div class="form-group pr-4">
+				<select class="form-control" id="beverage" required>
+					<option value="0" checked>Water</option>
 					<option value="1">Coffee</option>
 					<option value="2">Tea</option>
 					<option value="3">Beer</option>
@@ -24,22 +31,31 @@
 					<option value="5">Vodka</option>
 				</select>
 			</div>
-			<div>
-				<input type="radio" value="0" checked /> Small
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="size" value="0" checked />
+				<label class="pl-2">Small</label>
 			</div>
-			<div>
-				<input type="radio" value="1" /> Medium
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="size" value="1" />
+				<label class="pl-2">Medium</label>
 			</div>
-			<div>
-				<input type="radio" value="2" /> Large
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="size" value="2" />
+				<label class="pl-2">Large</label>
 			</div>
-			<div>
-				Quantity: <input type="number" id="quantity" required />
+			<div class="form-group form-inline pl-4">
+				<label class="pr-2">Quantity:</label>
+				<input class="form-control" type="number" id="quantity" min="1" max="15" required />
 			</div>
 		</div>
-		<div>
-			<button type="button" id="submit">Submit Order</button>
+
+		<div class="form-group form-inline" id="birthdatediv">
+		</div>
+
+		<div class="form-group">
+			<button type="button" class="btn btn-primary" id="submit">Place Order</button>
 		</div>
 	</form>
+	<div class="align-items-center" id="output"></div>
 </body>
 </html>
