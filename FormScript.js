@@ -23,8 +23,6 @@ var order = function() {
 	}
 }
 
-// The following function seems to be working, but
-// the div I'm trying to manipute won't appear.
 var checkAgeReq = function() {
 	bdElement = document.querySelector("#birthdatediv");
 	if(Number(document.querySelector("#beverage option:checked").value) > 2) {
